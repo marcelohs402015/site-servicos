@@ -40,7 +40,12 @@ export function Footer() {
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
                     <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name}. Todos os direitos reservados.</p>
-                    <p>Desenvolvido com tecnologia de ponta.</p>
+                    <p>
+                        Desenvolvido por{" "}
+                        <Link href="https://www.marcelohsilva.com.br" className="hover:text-secondary transition-colors" target="_blank">
+                            www.marcelohsilva.com.br™
+                        </Link>
+                    </p>
                 </div>
             </div>
         </footer>

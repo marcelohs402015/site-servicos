@@ -8,7 +8,7 @@ export const COMPANY_INFO = {
         whatsapp: "5515988118508", // Gabriel Martinho
         whatsappDisplay: "Gabriel: (15) 98811-8508",
         phone: "Gilson: (15) 98818-4061",
-        email: "contato@servicosobra.com.br", // Mantendo email genérico ou remover se não houver
+        email: "gabriel769zmartinho@gmail.com", // Mantendo email genérico ou remover se não houver
         address: "Sorocaba e Região, SP" // Assumindo região baseado no DDD 15
     }
 };
