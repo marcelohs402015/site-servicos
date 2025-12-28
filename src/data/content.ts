@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
     tagline: "Qualidade e Confiança em cada detalhe",
     description: "Especialista em manutenção predial, construção civil e serviços essenciais para sua casa ou empresa. Comprometimento com prazos e excelência na execução.",
     contact: {
-        whatsapp: "5515988118508", // Gabriel Martinho
+        whatsapp: "https://wa.me/5515988118508", // Link direto para o chat
         whatsappDisplay: "Gabriel: (15) 98811-8508",
         phone: "Gilson: (15) 98818-4061",
         email: "gabriel769zmartinho@gmail.com", // Mantendo email genérico ou remover se não houver
