@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Building2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { COMPANY_INFO, NAV_LINKS } from "@/data/content";
@@ -31,7 +31,7 @@ export function Header() {
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter text-blue-900 flex items-center gap-2">
-                    <span className="text-secondary">⚡</span> {COMPANY_INFO.name}
+                    <Building2 className="w-8 h-8 text-secondary" /> {COMPANY_INFO.name}
                 </Link>
 
                 {/* Desktop Nav */}
@@ -43,13 +43,6 @@ export function Header() {
                             className={cn(
                                 "text-sm font-medium hover:text-secondary transition-colors",
                                 scrolled ? "text-gray-700" : "text-white drop-shadow-md md:text-gray-800"
-                                // On Hero (transparent), text needs to be visible. 
-                                // Wait, if hero has image, white text? 
-                                // Let's assume Hero is colorful/dark, so white text initially?
-                                // Or maybe hero is light. Let's make text dynamic or just always dark if hero is light.
-                                // Simpler: Always dark on desktop if hero is light, or always white if hero is dark.
-                                // Let's use a conditional based on scroll. If not scrolled (on hero), maybe text is white if hero BG is dark.
-                                // I will set Hero BG to be Dark Blue gradient, so text should be white initially on desktop if transparent.
                             )}
                         >
                             {link.label}

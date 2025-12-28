@@ -25,15 +25,26 @@ export function Services() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-blue-100 hover:shadow-xl transition-all"
+                                className="bg-white rounded-xl shadow-lg border border-gray-100 hover:border-blue-100 hover:shadow-xl transition-all overflow-hidden"
                             >
-                                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-primary">
-                                    <Icon className="w-8 h-8" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {service.description}
-                                </p>
+                                {service.image ? (
+                                    <div className="relative w-full bg-gray-900 border-b border-gray-100">
+                                        {/* Using object-contain so the whole image is visible without cropping, or remove height restriction if aspect ratio varies */}
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="p-8 pb-0">
+                                        <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-primary">
+                                            <Icon className="w-8 h-8" />
+                                        </div>
+                                    </div>
+                                )}
+
+
                             </motion.div>
                         );
                     })}

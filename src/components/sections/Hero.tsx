@@ -72,15 +72,12 @@ export function Hero() {
                     </div>
 
                     <div className="flex-1 hidden md:block relative">
-                        {/* Ideally an image here. Using a generated abstract composition or placeholder */}
-                        <div className="relative w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden glass-panel shadow-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 flex items-center justify-center">
-                            {/* Illustration placeholder */}
-                            <div className="text-center space-y-4">
-                                <div className="w-24 h-24 bg-secondary rounded-full mx-auto flex items-center justify-center shadow-lg animate-pulse">
-                                    <ArrowRight className="w-12 h-12 text-white -rotate-45" />
-                                </div>
-                                <p className="font-bold text-2xl">Transforme seu <br /> ambiente hoje</p>
-                            </div>
+                        <div className="relative w-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                            <img
+                                src="/imagens/sua-melhor-escolha.png"
+                                alt="Sua Melhor Escolha"
+                                className="w-full h-auto block"
+                            />
                         </div>
                     </div>
 

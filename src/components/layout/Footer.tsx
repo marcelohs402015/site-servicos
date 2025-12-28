@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { COMPANY_INFO, NAV_LINKS } from "@/data/content";
+import { Building2 } from "lucide-react";
 
 export function Footer() {
     return (
@@ -8,7 +9,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <Link href="/" className="text-2xl font-bold text-white flex items-center gap-2">
-                            <span className="text-secondary">⚡</span> {COMPANY_INFO.name}
+                            <Building2 className="w-6 h-6 text-secondary" /> {COMPANY_INFO.name}
                         </Link>
                         <p className="max-w-sm">
                             {COMPANY_INFO.description}
