@@ -75,20 +75,23 @@ export function Contact() {
                     </motion.div>
 
                     {/* Email */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 flex flex-col items-center text-center"
-                    >
-                        <Mail className="w-10 h-10 text-blue-300 mb-4" />
-                        <h3 className="text-xl font-bold mb-2">Email</h3>
-                        <p className="text-gray-300 mb-4">Para solicitações e parcerias</p>
-                        <Link href={`mailto:${COMPANY_INFO.contact.email}`} className="text-lg font-bold hover:text-secondary transition-colors break-all">
-                            {COMPANY_INFO.contact.email}
-                        </Link>
-                    </motion.div>
+                    <Link href={`mailto:${COMPANY_INFO.contact.email}`} className="block">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                            className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 flex flex-col items-center text-center h-full cursor-pointer transition-colors"
+                        >
+                            <Mail className="w-10 h-10 text-blue-300 mb-4" />
+                            <h3 className="text-xl font-bold mb-2">Email</h3>
+                            <p className="text-gray-300 mb-4">Para solicitações e parcerias</p>
+                            <span className="text-lg font-bold hover:text-secondary transition-colors break-all">
+                                {COMPANY_INFO.contact.email}
+                            </span>
+                        </motion.div>
+                    </Link>
 
                     {/* Location */}
                     <motion.div
