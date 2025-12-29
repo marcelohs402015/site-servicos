@@ -30,8 +30,11 @@ export function Header() {
             )}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter text-blue-900 flex items-center gap-2">
-                    <Building2 className="w-8 h-8 text-secondary" /> {COMPANY_INFO.name}
+                <Link href="/" className={cn(
+                    "text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-2",
+                    scrolled ? "text-blue-900" : "text-white drop-shadow-lg"
+                )}>
+                    <Building2 className={cn("w-8 h-8", scrolled ? "text-secondary" : "text-secondary")} /> {COMPANY_INFO.name}
                 </Link>
 
                 {/* Desktop Nav */}
@@ -58,7 +61,10 @@ export function Header() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden p-2 text-gray-800"
+                    className={cn(
+                        "md:hidden p-2 transition-colors",
+                        scrolled ? "text-gray-800" : "text-white"
+                    )}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X /> : <Menu />}

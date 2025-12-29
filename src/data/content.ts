@@ -1,14 +1,14 @@
 import { Droplets, Bug, Shield, Wrench, PaintRoller, Hammer, Phone, Mail, MessageCircle } from "lucide-react";
 
 export const COMPANY_INFO = {
-    name: "Prediais Serviços",
+    name: "Serviços Prediais",
     tagline: "Qualidade e Confiança em cada detalhe",
     description: "Especialista em manutenção predial, construção civil e serviços essenciais para sua casa ou empresa. Comprometimento com prazos e excelência na execução.",
     contact: {
         whatsapp: "https://wa.me/5515988118508", // Link direto para o chat
         whatsappDisplay: "Gabriel: (15) 99136-6816",
         phone: "Gilson: (15) 98818-4061",
-        email: "prediaisservicos@gmail.com", // Mantendo email genérico ou remover se não houver
+        email: "prediaisservicos0@gmail.com", // Mantendo email genérico ou remover se não houver
         address: "Sorocaba e Região, SP" // Assumindo região baseado no DDD 15
     }
 };
